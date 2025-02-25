@@ -1,0 +1,6 @@
+a = int(input("enter the first number"))
+b = int(input("enter the second number"))
+x = (a,b)
+y = (b,a)
+print(f"numbers before swapping:{x}")
+print(f"numbers after swapping:{y}")
