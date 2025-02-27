@@ -46,13 +46,16 @@ clone = original_list[:]
 print(clone)
 
 #Split a string into a list of words
-string = "Split a string into a list of words"
-str=string.split()
-print(str)
-
-# strig = seperator.str.join()
-# print(strig)
-
+# Split a string into a list of words
+input_str = "Python program to split and join a string"
+word_list = input_str.split() # By default, split on whitespace
+# Join the list of words into a string
+separator = " " # specify the separator between words
+output_str = separator.join(word_list)
+# Print the results
+print("Original String:", input_str)
+print("List of split Words:", word_list)
+print("Joined String:", output_str)
 
 #unique value from dictionary
 my_dict = {
@@ -82,3 +85,80 @@ dict1 = {'a': 1, 'b': 2}
 dict2 = {'c': 3, 'd': 4}
 dict1.update(dict2)
 print(dict1)
+# convert key-values list to flat dictionary.
+key_values_list = [('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+flat_dict = {}
+for key,value in key_values_list:
+    flat_dict[key]= value
+    print(flat_dict)
+
+from collections import OrderedDict
+ordered_dict = OrderedDict([('b', 2), ('c', 3), ('d', 4)])
+new_item = ('a', 1)
+new_ordered_dict = OrderedDict([new_item])
+new_ordered_dict.update(ordered_dict)
+print("Updated OrderedDict:", new_ordered_dict)
+
+
+X, Y = map(int, input("Enter two digits (X, Y): ").split(','))
+array = [[0 for j in range(Y)] for i in range(X)]
+for i in range(X):
+    for j in range(Y):
+         array[i][j] = i * j
+for row in array:
+    print(row)
+
+
+input_sequence = input("Enter a comma-separated sequence of words: ")
+words = input_sequence.split(',')
+sorted_words = sorted(words)
+sorted_sequence = ','.join(sorted_words)
+print("Sorted words:", sorted_sequence)
+
+nput_sequence = input("Enter a sequence of whitespace-separated words:")
+words = set(input_sequence.split())
+sorted_words = sorted(words)
+result = ' '.join(sorted_words)
+print("Result:", result)
+
+
+
+sentence = input("Enter a sentence: ")
+letter_count = 0
+digit_count = 0
+for char in sentence:
+   if char.isalpha():
+        letter_count += 1
+   elif char.isdigit():
+        digit_count += 1
+print("LETTERS", letter_count)
+print("DIGITS", digit_count)
+
+
+input_sentence = input("Enter a sentence: ")
+words = input_sentence.split()
+word_freq = {}
+for word in words:
+     word = word.strip('.,?')
+     word = word.lower()
+if word in word_freq:
+   word_freq[word] += 1
+else:
+    word_freq[word] = 1
+sorted_words = sorted(word_freq.items())
+
+for word, frequency in sorted_words:
+    print(f"{word}:{frequency}")
+
+subjects = ["I", "You"]
+verbs = ["Play", "Love"]
+objects = ["Hockey", "Football"]
+sentences = []
+for sub in subjects:
+    for vrb in verbs:
+        for obj in objects:
+            sentence = f"{sub} {vrb} {obj}."
+            sentences.append(sentence)
+for sentence in sentences:
+    print(sentence)
+
