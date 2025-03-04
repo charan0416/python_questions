@@ -206,7 +206,7 @@
 #         return round(volume)
 #         print(cone_volume(3,3))
 
-#
+
 # def reverse(input_str):
 #     reversed_str = input_str[::-1].swapcase()
 #     return reversed_str
@@ -229,3 +229,16 @@
 #     degrees = radians * (180 / math.pi)
 #     return round(degrees, 1)
 # print(radians_to_degrees(180))
+
+# import math
+# def area_of_square(side):
+#    area = side*side
+#    return area
+# print(area_of_square(5))
+
+# import math
+# def avg(a,b):
+#     average = (a+b)/2
+#     return average
+# print(avg(5,7))
+
